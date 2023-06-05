@@ -75,7 +75,7 @@ data['createdAt'] = data['createdAt'].dt.strftime('%Y-%m-%d %H:%M:%S')
 dataMatrix = data.to_numpy()
 
 # Calculer le nombre de lignes à conserver (10% du total)
-nombre_lignes_a_garder = int(0.01 * len(dataMatrix))
+nombre_lignes_a_garder = int(0.1 * len(dataMatrix))
 
 # Sélectionner aléatoirement 10% des indices de lignes
 indices_lignes_gardees = np.random.choice(len(dataMatrix), size=nombre_lignes_a_garder, replace=False)
